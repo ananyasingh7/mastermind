@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
             if(codemaker[i] == guess[i]){
                 b++;
                 codemaker[i] = '*';
-            } v
+            } 
         }
         printf("%s\n", correct);
         printf("%s\n", codemaker);
