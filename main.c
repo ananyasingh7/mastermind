@@ -1,15 +1,5 @@
 #include<stdio.h>
-#include<stdbool.h>
-#include<string.h>
 #include<stdlib.h>
-
-int correct(char* word, char* correctWord){
-	for(int i = 0; i<4; ++i){
-		
-	}
-}
-
-
 
 
 int main(int argc, char* argv[]){
