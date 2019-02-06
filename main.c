@@ -12,7 +12,7 @@ int main(int argc, char* argv[]){
 	printf("Available Colors: (B)lue (G)reen (O)range (P)urple (R)ed (Y)ellow\n");
 
     int guesses = 12;
-    int counter = 0;
+    int b = 0;
 	bool gameOver = false; 
     char codemaker[256];
 	strcpy(codemaker, argv[1]);
@@ -22,7 +22,7 @@ int main(int argc, char* argv[]){
     if (argc>4){
         printf("This is just wrong");
         printf("%s\n",codemaker);
-        printf("%d",counter);
+        printf("%d",b);
     }
 
 	while(!gameOver){
@@ -36,14 +36,27 @@ int main(int argc, char* argv[]){
         int comp = strcmp(codemaker,guess);
         if(comp == 0){
             printf("Feedback: %d, %d\n",4,0);
+            break;
+        }
+        int i;
+
+        for(i=0; i<4; ++i){
+            if(codemaker[i] == guess[i]){
+                b++;
+            } 
         }
         
-		
-	}
+        
+        
+        
+        
+        printf("Feedback: %d\n",b);
 
 	
 
 
 
-	return 0;
+	
+    }
+    return 0;   
 }
